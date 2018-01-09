@@ -8,9 +8,10 @@ module.exports = async opts => {
   const orgId = opts.orgId || ''
 
   const { access_token: token, expires_in: expires } = await createToken(opts)
+
   return {
     getToken: () => token,
-    getData: async url => await getData(url, token, orgId),
+    getData: url => getData(url, token, orgId),
     getExpiration: () => expires,
     refreshToken: () => console.log('refresh token')
   }
