@@ -1,16 +1,47 @@
 {
-  "name": "fint-client",
+  "name": "fint-get-data",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard && nsp check && ava",
+    "test-offline": "standard && ava",
+    "coverage": "nyc ava",
+    "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
+    "standard-fix": "standard --fix"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Jonas Maccyber Enge",
+    "email": "jonas.enge@gmail.com",
+    "url": "https://github.com/maccyber"
+  },
+  "contributors": [{
+    "name": "Geir Gåsodden",
+    "email": "geir.gasodden@pythonia.no",
+    "url": "https://github.com/zrrrzzt"
+  }],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/telemark/fint-get-data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/telemark/fint-get-data/issues"
+  },
+  "homepage": "https://github.com/telemark/fint-get-data#readme",
   "dependencies": {
     "fint-get-data": "1.0.0",
     "fint-token-generator": "1.0.0"
+  },
+  "devDependencies": {
+    "ava": "0.24.0",
+    "coveralls": "3.0.0",
+    "nsp": "3.1.0",
+    "nyc": "11.4.1",
+    "standard": "10.0.3"
   }
 }
