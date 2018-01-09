@@ -6,13 +6,15 @@ module.exports = async opts => {
     throw Error('Missing required input: options')
   }
   const orgId = opts.orgId || ''
-
-  const { access_token: token, expires_in: expires } = await createToken(opts)
-
-  return {
-    getToken: () => token,
-    getData: url => getData(url, token, orgId),
-    getExpiration: () => expires,
-    refreshToken: () => console.log('refresh token')
+  try {
+    const { access_token: token, expires_in: expires } = await createToken(opts)
+    return {
+      getToken: () => token,
+      getData: url => getData(url, token, orgId),
+      getExpiration: () => expires,
+      refreshToken: () => console.log('refresh token')
+    }
+  } catch (error) {
+    throw error
   }
 }
