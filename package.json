@@ -19,23 +19,25 @@
     "email": "jonas.enge@gmail.com",
     "url": "https://github.com/maccyber"
   },
-  "contributors": [{
-    "name": "Geir Gåsodden",
-    "email": "geir.gasodden@pythonia.no",
-    "url": "https://github.com/zrrrzzt"
-  }],
+  "contributors": [
+    {
+      "name": "Geir Gåsodden",
+      "email": "geir.gasodden@pythonia.no",
+      "url": "https://github.com/zrrrzzt"
+    }
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/telemark/fint-get-data.git"
+    "url": "git+https://github.com/telemark/fint-client.git"
   },
   "bugs": {
-    "url": "https://github.com/telemark/fint-get-data/issues"
+    "url": "https://github.com/telemark/fint-client/issues"
   },
-  "homepage": "https://github.com/telemark/fint-get-data#readme",
+  "homepage": "https://github.com/telemark/fint-client#readme",
   "dependencies": {
     "fint-get-data": "1.0.0",
-    "fint-token-generator": "1.0.0"
+    "fint-get-token": "1.0.2"
   },
   "devDependencies": {
     "ava": "0.24.0",

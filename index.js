@@ -1,13 +1,13 @@
-const createToken = require('fint-token-generator')
+const getToken = require('fint-get-token')
 const getData = require('fint-get-data')
 
-module.exports = async opts => {
-  if (!opts) {
+module.exports = async options => {
+  if (!options) {
     throw Error('Missing required input: options')
   }
-  const orgId = opts.orgId || ''
+  const orgId = options.orgId || ''
   try {
-    const { access_token: token, expires_in: expires } = await createToken(opts)
+    const { access_token: token, expires_in: expires } = await getToken(options)
     return {
       getToken: () => token,
       getData: url => getData(url, token, orgId),
