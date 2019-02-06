@@ -37,7 +37,7 @@
   "homepage": "https://github.com/telemark/fint-client#readme",
   "dependencies": {
     "fint-get-data": "1.0.3",
-    "fint-get-token": "1.0.4"
+    "fint-get-token": "1.0.5"
   },
   "devDependencies": {
     "ava": "1.2.1",
