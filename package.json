@@ -40,7 +40,7 @@
     "fint-get-token": "1.0.5"
   },
   "devDependencies": {
-    "ava": "5.1.0",
+    "ava": "5.1.1",
     "coveralls": "3.1.1",
     "nyc": "15.1.0",
     "standard": "17.0.0"
